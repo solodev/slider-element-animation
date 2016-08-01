@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+	<link href="animated-slider.css" rel="stylesheet" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js" type="text/javascript"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="animated-slider.js"></script>
+	
+	<script>
+		$(document).ready(function(){			
+			$('.ct-slick-homepage').on('init', function(event, slick){
+				$('.animated').addClass('activate fadeInUp');
+			});		
+
+			$('.ct-slick-homepage').slick({
+				autoplay: true,
+				autoplaySpeed: 3000,
+				pauseOnHover: false,
+			});			
+			
+			$('.ct-slick-homepage').on('afterChange', function(event, slick, currentSlide) {
+			  $('.animated').removeClass('off');
+			  $('.animated').addClass('activate fadeInUp');
+			});		
+
+			$('.ct-slick-homepage').on('beforeChange', function(event, slick, currentSlide) {
+			  $('.animated').removeClass('activate fadeInUp');
+			  $('.animated').addClass('off');
+			});
+		});
+	</script>
+
+</head>
+<body >
+
+<div class="ct-header ct-header--slider ct-slick-custom-dots" id="home">
+	<div class="ct-slick-homepage" data-arrows="true" data-autoplay="true">
+
+		<div class="ct-header tablex item" data-background="images/slide1.jpg">
+			<div class="ct-u-display-tablex">
+				<div class="inner">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 col-lg-6 slider-inner">
+								<h1 class="big animated">Big Data. Realtime Insight.</h1>
+								<p class="animated">Leverage your data and improve marketing and sales ROI.</p>
+								<a class="btn btn-transparent btn-lg text-uppercase animated" href="">Learn More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ct-header tablex item" data-background="images/slide2.jpg">
+			<div class="ct-u-display-tablex">
+				<div class="inner">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 col-lg-6 slider-inner">
+								<h1 class="big animated">Disrupting Industries with Grace</h1>
+								<p class="animated">WebCorpCo is at the forefront of digital marketing, content management, automated marketing, and more.</p>
+								<a class="btn btn-transparent btn-lg text-uppercase animated" href="">Learn More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ct-header tablex item" data-background="images/slide3.jpg">
+			<div class="ct-u-display-tablex">
+				<div class="inner">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 col-lg-6 slider-inner">
+								<h1 class="big animated">Moving Business Forward</h1>
+								<p class="animated">Learn how WebCorpCo can take your business to the next level.</p>
+								<a class="btn btn-transparent btn-lg text-uppercase animated" href="">Learn More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div><!-- .ct-slick-homepage -->
+</div><!-- .ct-header -->      
+
+
+</body>
+</html>
